@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .back {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: white;
+            animation-name: backdiv;
+            animation-duration: 3500ms;
+            animation-iteration-count: infinite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heart {
+            background-color: rgb(131, 8, 8);
+            width: 20vmin;
+            height: 20vmin;
+            transform: rotate(-45deg);
+            position: relative;
+            animation-name: beat;
+            animation-duration: 3500ms;
+            animation-iteration-count: infinite;
+        }
+
+        .heart:after,
+        .heart:before {
+            content: "";
+            position: absolute;
+            background-color: rgb(131, 8, 8);
+            border-radius: 50%;
+            width: 20vmin;
+            height: 20vmin;
+        }
+
+        .heart:after {
+            top: 0;
+            left: 10vmin;
+        }
+
+        .heart:before {
+            top: -10vmin;
+            left: 0;
+        }
+
+        @keyframes backdiv {
+            50% {
+                background: #fffffffd;
+            }
+        }
+
+        @keyframes beat {
+            0% {
+                transform: scale(1) rotate(-45deg);
+            }
+
+            50% {
+                transform: scale(0.8) rotate(-45deg);
+            }
+        }
+
+        button {
+            background-color: rgb(131, 8, 8);
+            color: white;
+            padding: 2vmin 4vmin;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.5vmin;
+            font-family: 'Nunito', sans-serif;
+            cursor: pointer;
+            margin-top: 4vmin;
+        }
+
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        button a:hover {
+            text-decoration: underline;
+        }
+
+        .elements {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .heart {
+                width: 16vmin;
+                height: 16vmin;
+            }
+
+            .heart:after,
+            .heart:before {
+                width: 16vmin;
+                height: 16vmin;
+            }
+
+            button {
+                font-size: 1.2vmin;
+                padding: 2vmin 3vmin;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .heart {
+                width: 25vmin;
+                height: 25vmin;
+            }
+
+            .heart:after,
+            .heart:before {
+                width: 25vmin;
+                height: 25vmin;
+            }
+
+            button {
+                font-size: 1.5vmin;
+                padding: 2vmin 3vmin;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <title>Rony💓</title>
+</head>
+
+<body>
+    <div class="back">
+        <div class="elements">
+            <div class="heart"></div>
+            <button><a href="index2.html">Touch My Heart</a></button>
+        </div>
+    </div>
+</body>
+
+</html>
